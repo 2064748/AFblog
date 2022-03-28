@@ -1,0 +1,749 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 25vh;
+    background-color: black;
+}
+
+header nav {
+    position: fixed;
+    width: 100%;
+    height: 5vh;
+    color: white;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.801);
+}
+
+header nav ul {
+    text-align: center;
+    margin-top: 1%;
+    width: 100%;
+}
+
+header nav li {
+    margin-bottom: 1%;
+    margin-left: 5.5%;
+    float: left;
+    padding: 0 5% 0 5%;
+}
+
+header nav li a {
+    cursor: pointer;
+}
+
+.header-hover:hover {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+#logo {
+    position: absolute;
+    min-width: 5%;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.header-img {
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    background-image: url(../img/headerimg.svg);
+    background-size: cover;
+}
+
+#header-cover {
+    width: 100%;
+    height: 50%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.header-column {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%;
+    height: 90%;
+}
+
+.header-column-fashion {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    width: 40%;
+}
+
+.btn-column {
+    width: 100%;
+    padding-top: 14%;
+    padding-bottom: 14%;
+    margin-bottom: 1%;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.btn-column-fashion {
+    position: relative;
+    width: 100%;
+    padding-top: 14%;
+    padding-bottom: 14%;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    display: block;
+    margin-bottom: 1%;
+}
+
+#click:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    transition: .3s ease;
+}
+
+#alice:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    transition: .3s ease;
+}
+
+.articles {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: relative;
+    width: 100vw;
+}
+
+#hamburger {
+    width: 140%;
+}
+
+.articles ul {
+    text-align: right;
+    color: white;
+}
+
+.articles ul li {
+    display: inline-block;
+    padding-left: 5%;
+    margin-right: 2%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#sort:hover, #filter:hover {
+    font-weight: bold;
+    background-color: red;
+}
+
+.article-rows {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+}
+
+#art-1, #art-2, #art-3 {
+    padding-bottom: 40px;
+}
+
+.article-btn {
+    width: 450px;
+    position: relative;
+    padding-bottom: 72px;
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.article-btn h4 {
+    position: relative;
+    width: 90%;
+    line-height: 22px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.article-background {
+    width: 100%;
+    height: 324px;
+    background-position: center;
+    background-size: cover;
+}
+
+.art-hover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .2s ease;
+}
+
+.art-hover:hover {
+    background-color: hsl(0, 0%, 0%, 75%);
+}
+
+.art-hover:hover>p {
+    visibility: visible;
+}
+
+.art-hover p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat Subrayada';
+    font-size: 150%;
+    background-color: red;
+}
+
+.hoverable {
+    visibility: hidden;
+}
+
+#article1 {
+    background-image: url(../img/art1.svg);
+}
+
+#article2 {
+    background-image: url(../img/art2.svg);
+}
+
+#article3 {
+    background-image: url(../img/art3.svg);
+}
+
+#article4 {
+    background-image: url(../img/art4.svg);
+}
+
+#article5 {
+    background-image: url(../img/art5.svg);
+}
+
+#article6 {
+    background-image: url(../img/art6.svg);
+    background-position-y: 70%;
+}
+
+.about {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+}
+
+.about-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+}
+
+.about-left h3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: .5%;
+    font-size: 22px;
+    border: 1px solid black;
+    font-family: 'Montserrat Subrayada';
+}
+
+.about-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+}
+
+.me {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+.me img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.me-text {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 23px;
+    font-size: 16px;
+    color: white;
+}
+
+.me-text p {
+    text-align: justify;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+}
+
+footer {
+    position: relative;
+    width: 100vw;
+    height: 25vh;
+    background-color: black;
+}
+
+#footer-logo {
+    position: absolute;
+    left: 1vw;
+    top: 5%;
+}
+
+#footer-logo img {
+    width: 65%;
+}
+
+.footer-nav {
+    position: absolute;
+    bottom: 0;
+    left: 5vw;
+    width: calc(500px + 50px);
+}
+
+.footer-nav ul {
+    color: white;
+}
+
+.footer-nav li {
+    display: inline-block;
+    margin-bottom: 4%;
+    margin-left: 5.5%;
+    padding: 0 1% 0 1%;
+}
+
+.footer-icon {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    width: calc(120px + 100px);
+}
+
+.footer-icon img {
+    width: 40px;
+    transition: .2s ease;
+}
+
+.footer-icon li {
+    display: inline-block;
+    padding: 3.5px;
+    margin-bottom: 15px;
+}
+
+.fashion-main {
+    width: 100vw;
+    height: 75vh;
+    position: relative;
+}
+
+.fashion-main-left {
+    position: absolute;
+    left: 0;
+    width: 50vw;
+    height: 100%;
+    background-image: url(../img/fashion.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+#streetwear {
+    background-image: url(../img/streetwear.svg);
+}
+
+.fashion-main-right {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#streetwear-right {
+    background-image: url(../img/streetweardecor.svg);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.fashion-main-right h3 {
+    position: relative;
+    padding: 15%;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Montserrat Subrayada';
+}
+
+.fashion-main-left h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 90px;
+    font-family: 'Montserrat Subrayada';
+    width: 100%;
+    text-align: center;
+}
+
+.fashion-main-left span {
+    font-size: 35px;
+}
+
+.fashion-body {
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+}
+
+.fashion-body-left {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+}
+
+.f-body {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+}
+
+.f-body-btn {
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.16) 5px 6px 10px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    transition: .2s ease;
+}
+
+.f-body-btn:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+.f-content {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.fashion-body-right {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+}
+
+.f-body-2 {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+}
+
+.fashion-body-right h3 {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Montserrat Subrayada';
+    margin-top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.spotlight {
+    position: relative;
+    width: 100%;
+    height: 42vh;
+}
+
+.spotlight-text {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    transform: translateY(-60%);
+    width: 45%;
+    text-align: right;
+}
+
+.spotlight h4 {
+    font-size: 22px;
+    position: relative;
+    margin-top: 30%;
+}
+
+.spotlight p {
+    position: relative;
+    margin-top: 8%;
+    width: 100%;
+    line-height: 19px;
+}
+
+.spotlight img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.spotlight button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    background-color: white;
+    font-size: 15px;
+}
+
+.spotlight button:hover {
+    background: rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+}
+
+.decor-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.decor-right h2 {
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat Subrayada';
+}
+
+.streetwear-body {
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+}
+
+.str-body-size {
+    position: absolute;
+    width: 99%;
+    height: 97%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#trendy {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 55.4%;
+    background-image: url(../img/trendy.svg);
+    background-size: cover;
+    transition: 1s ease-in-out;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat Subrayada';
+}
+
+#trendy h3 {
+    font-size: 140px;
+}
+
+#main {
+    position: absolute;
+    width: 44%;
+    height: 60%;
+    background-color: pink;
+    right: 0;
+    top: 0;
+    background-image: url(../img/main.jpg);
+    background-size: cover;
+    background-position-y: center;
+    transition: 2s ease;
+}
+
+#main h3 {
+    font-size: 60px;
+}
+
+#discover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 44%;
+    height: 38.5%;
+    background-color: #043238;
+}
+
+#discover h3 {
+    font-size: 40px;
+}
+
+.str-btn {
+    color: white;
+}
+
+.str-btn:hover > #trendy {
+    background-position-x: 984px;
+}
+
+.str-btn:hover>#main {
+    background-position-y: 100%;
+}
+
+.article-page {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 1000;
+}
+
+.article-back {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    top: 15px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    background-color: hsl(0, 0%, 0%, 10%);
+    padding: 5px 12px;
+    z-index: 5000;
+    cursor: pointer;
+}
+
+.article-back:hover {
+    color: white;
+    background-color: red;
+    font-weight: bold;
+}
+
+#artc-alice {
+    width: 80vw;
+    height: 210vh;
+    background-image: url(../img/artcalice.svg);
+    background-size: cover;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
